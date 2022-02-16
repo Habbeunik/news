@@ -20,9 +20,6 @@ const TopHeadlines = () => {
       });
   }, []);
 
-  console.log("articles", articles);
-  console.log("fetcing", fetching);
-
   return (
     <>
       <Header page="Top Headlines" />
@@ -40,6 +37,7 @@ const TopHeadlines = () => {
         ) : (
           articles.map((newsItem) => (
             <NewsCard
+              url={newsItem.url}
               image={newsItem.urlToImage}
               title={newsItem.title}
               description={newsItem.description}
